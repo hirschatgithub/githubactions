@@ -24,3 +24,8 @@ jobs:
         run: echo "::set-output name=firstword::hello"
       - id: step2
         run: echo "::set-output name=secondword::world"
+      - name: Extract frontmatter from markdown as JSON
+        id: frontmatter
+        uses: aliencube/frontmatter-to-json-actions@v1
+        with:
+          markdown: 'hi'
